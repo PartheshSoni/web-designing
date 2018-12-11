@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pract9c</title>
+	<script>
+		var list = [];
+		var str = prompt("Enter string: ");	
+		while(!(str=="END"))
+		{
+			list[list.length] = str;
+			var str = prompt("Enter string: ");
+		}
+		list.sort();
+		var i;
+		for(i=0;i<list.length;i++)
+		{
+			document.write(list[i]+"<br>");
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

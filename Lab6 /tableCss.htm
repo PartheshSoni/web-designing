@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS table</title>
+	<style type="text/css">
+		table{
+			border:none;
+			padding:none;
+			border-collapse: collapse;
+		}
+		.a{
+			column-count: 2;
+			column-rule-width:3px;
+			column-rule-style:dotted;
+			column-rule-color: black;  
+		}
+	</style>
+</head>
+<body>
+<b>VALUE OF FRUITS IN RUPEES PER KG OR PER UNIT</b>
+<table style="border-top-style:solid;border-top-width:2px;border-bottom-style:solid;border-bottom-width: 2px;" cellpadding="10px" cellspacing="6px" width="800">
+	<thead >
+		<tr>
+			<th style="border-bottom-style:solid; border-bottom-color:grey; border-bottom-width:2px;" rowspan="2">Fruit <br>Crops</th>
+			<th style="border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:grey;" colspan="2">YEAR</th>
+			<th style="border-bottom-style:solid; border-bottom-color:grey; border-bottom-width:2px;" rowspan="2" colspan="2">DESCRIPTION</th>
+		</tr>
+		<tr style="border-bottom-style:solid; border-bottom-color:grey; border-bottom-width:2px;"><th style="border-bottom-style:solid; border-bottom-color:grey; border-bottom-width:2px;">2016</th><th style="border-bottom-style:solid; border-bottom-color:grey; border-bottom-width:2px;">2017</th></tr>
+
+	</thead>
+
+	<tbody>
+		<tr style="border: none">
+			<td><b>Mango</b></td>
+			<td>Rs.75</td>
+			<td>Rs.85</td>
+			<td class="a">Mangoes are juicy stone fruit(drupe) from numerous species of tropical trees belonging to flowering genus mangifera, cultivated mostly for their edible fruit</td>
+		</tr>
+		<tr style="border-bottom:none;background-color: lightgrey;">
+			<td><b>Lychee</b></td>
+			<td>Rs.23</td><td>Rs.23</td>
+			<td class="a">The lychee is the most renowned of a group of edible fruits of the soapberry
+			Family, Sapindaceae. It is botanically designated Litchi chinensis Sonn.</td>
+		</tr>
+		<tr style="border: none">
+			<td><b>Banana</b></td>
+			<td>Rs.18</td><td>Rs.20</td>
+			<td class="a">The banana plant is the largest herbaceous flowering plant> All the above ground
+			parts of a banana plant grow from a structure usually called a "corm".</td> 
+		</tr>
+		<tr style="border-bottom:none; background-color: lightgrey;">
+			<td><b>Pomelo</b></td>
+			<td>Rs.45</td><td>Rs.50</td>
+			<td class="a">The pomelo, Citrus maxima or Citrus grandis, also called Pomelo, pummelo, batabi or jambura(Bengali), is a natural
+			(non-hybrid) citrus fruit, similar in appearance to a large grapefruit, native to South and Southeast Asia.</td> 
+		</tr>
+	</tbody>
+	<tfoot style="text-align: center;"><tr><td colspan="5"><b>REPORT FOR THE YEAR 2016 AND 2017</b></td></tr></tfoot>
+	<caption align="bottom">Caption: Fruit Table</caption>
+
+</table>
+</body>
+</html>

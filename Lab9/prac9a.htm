@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+	<script>
+		var arr1=[];
+		var arr2=[];
+		var n1=prompt("Enter size of array1: ");
+		var n2=prompt("Enter size of array2: ");
+		for(var i=0; i<n1; i++){
+			arr1[i]=prompt("Enter element of array1: ");
+		}
+		for(var i=0; i<n2; i++){
+			arr2[i]=prompt("Enter element of array2: ");
+		}
+		var res=[];
+		for(var i=0; i<n1; i++){
+			var j=0;
+			var pre=0;
+			for(j=0; j<n2; j++){
+				if(arr1[i]==arr2[j]){
+					pre=1;
+					break;
+				}
+			}
+			if(pre==0)
+				res.push(arr1[i]);
+		}
+		for(var i=0; i<n2-1; i++){
+			var pre=0;
+			for(var j=i+1; j<n2; j++){
+				if(arr2[i]==arr2[j])
+				{
+					pre=1;
+					break;
+				}
+			}
+			if(pre==0)
+				res.push(arr2[i]);
+		}
+		res.push(arr2[n2-1]);
+		document.write("The new array formed is: "+res);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

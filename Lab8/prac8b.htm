@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS example</title>
+	<script>
+
+		var n=prompt("Give the value of N");
+		var arr=[];
+		var i;
+		var ans=0;
+		document.write("Enter the digits of the number in order...from left to right")
+		for(i=0; i<n; i++){
+			arr[i]=prompt("Enter a digit");
+			ans+=Math.pow(10, n-1-i)*arr[i];
+		}
+		document.write("<br><br>The following is the number formed: "+ans);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

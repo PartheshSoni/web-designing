@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+	<style type="text/css">
+		.fieldset-auto-width{
+			display: inline-block;
+		}
+	</style>
+
+</head>
+<center><body>
+
+	<h3>Student Registration Page</h3>
+	<br>
+
+	<form>
+		<div>
+		<fieldset class="fieldset-auto-width">
+		<legend><font size="-1">Student Information</font></legend>
+		<table>
+		<tr><td><label>Roll Number:
+		<input type="text" name="rollno"></td></tr>
+		<tr><td>Name:
+		<input type="text" name="firstname" placeholder="Enter your name here"></td></tr>
+		<tr><td>Parent's Name:
+		<input type="text" name="parname"></td></tr>
+		<tr><td>Your Image:
+		<input type="file" name="pic" accept="image/*"></td></tr>
+		<tr><td>Gender: Male: 
+		<input type="radio" name="gender" value="male" checked="checked">
+		Female:
+		<input type="radio" name="gender" value="female"></td></tr>
+		<tr><td>Semester:
+		<select>
+			<option value="I" selected>I</option>
+			<option value="II">II</option>
+			<option value="III">III</option>
+			<option value="IV">IV</option>
+			<option value="V">V</option>
+			<option value="VI">VI</option>
+		</select></td></tr>
+		<tr><td>Address:<br>
+		<textarea name="addr" rows="10" cols="30" placeholder="Enter your present address" wrap="hard"></textarea></td></tr>
+		<tr><td>Age:
+		20<input type="range" id="ageInputId" name="age" min="20" max="65" oninput="ageOutputId.value=ageInputId.value">65  =
+		<output name="out" id="ageOutputId"></output></td></tr>
+		
+		</fieldset><br>
+		
+		</table>
+	</div>
+	</form>
+	<input type="submit" name="Submit">
+
+</body></center>
+</html>

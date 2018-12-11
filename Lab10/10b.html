@@ -1,0 +1,109 @@
+<!DOCTYPE html>	
+<html>
+<head>
+	<title>10b</title>
+	<script type="text/javascript">
+		function functionvalidate(){
+
+			
+			var ip=document.getElementById("ipaddr").value;
+			var alphanum=document.getElementById("anumberic").value;
+			var date=document.getElementById("date").value;
+			var email=document.getElementById("email").value;
+			var phone=document.getElementById("pnumber").value;
+			var pass1=document.getElementById("Password1").value;
+			var pass2=document.getElementById("Password2").value;
+			var count=6;
+			var ipformate = 
+			/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+			if(!ip.match(ipformate)){
+				alert("Ip not valid");
+				count=count-1;
+			}
+
+			var alpha = /^[a-zA-Z0-9]+?/;
+			if(!alphanum.match(alpha)){
+				alert("Alphanumeric entry isn't valid");
+				count=count-1;
+			}
+
+			var emailcheck = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+			if(!email.match(emailcheck)){
+				alert("Email is not valid");
+				count=count-1;
+			}
+
+			var phonecheck = /^\d{10}$/;
+			if(!phone.match(phonecheck)){
+				alert("Enter Valid phone-number");
+				count=count-1;
+			}
+
+			var datecheck = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
+			if(!date.match(datecheck)){
+				alert("Enter valid formate of date");
+				count=count-1;
+			}
+
+			if(pass1 != pass2){
+				alert("Enter same Password and re-type Password");
+				count=count-1;
+			}
+
+			if(count == 6){
+				alert("Thank you for registration");
+				return true;
+			}else{
+				return false;
+			}
+/*Author:- Apurv Jain*/
+		}
+	</script>
+	<style type="text/css">
+		body{
+			font-family: Georgia;
+  			line-height: 1.4;
+  			font-weight: normal;
+  			font-stretch: normal;
+  			font-variant: small-caps;
+  			font-size: 16px;
+		}
+		form{
+			margin-left: 300px;
+			margin-top: 150px;
+			margin-right: 300px;
+		}
+	</style>
+</head>
+<body>
+	<form name="validationform" class="validationform">
+		<fieldset>
+			<legend>JsForm</legend>
+			<br>
+			Ip: <input type="text" name="ipaddr" id="ipaddr" placeholder="e.g.255.255.255.255" >
+			<br><br>
+
+			Alphanumeric: <input type="text" name="anumberic" id="anumberic" placeholder="e.g.ac4dd5">
+			<br><br>
+
+			Date: <input type="text" name="date" id="date" placeholder="DD/MM/YYYY"> 
+			<br><br>
+
+			Email: <input type="email" name="email" id="email" placeholder="xyz@domain.com">
+			<br><br>
+
+			Phone number: <input type="number" name="pnumber" id="pnumber" >
+			<br><br>
+
+			Password: <input type="Password" name="Password1" id="Password1" placeholder="********">
+			<br><br>
+
+			Re-enter Password: <input type="Password" name="Password2" id="Password2" placeholder="********">
+			<br><br>
+
+			<input type="submit" name="submitb" id="submitb" onclick=" return functionvalidate();">
+
+		</fieldset>
+	</form>
+</body>
+</html>
